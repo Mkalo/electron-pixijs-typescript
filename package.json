@@ -1,0 +1,42 @@
+{
+  "name": "electron-pixijs-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "lint:gulp": "gulp lint",
+    "build:gulp": "gulp build",
+    "build:web": "gulp build --web",
+    "lint": "npm run lint:gulp -s",
+    "prebuild": "npm run lint:gulp -s",
+    "build": "npm run build:gulp -s",
+    "preweb": "npm run lint:gulp -s",
+    "web": "npm run build:web",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/electron": "^1.4.34",
+    "@types/node": "^7.0.10",
+    "@types/pixi.js": "^4.4.0",
+    "del": "^2.2.2",
+    "electron": "^1.6.2",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-tslint": "^7.1.0",
+    "gulp-typescript": "^3.1.6",
+    "gulp-util": "^3.0.8",
+    "merge2": "^1.0.3",
+    "pixi.js": "^4.4.3",
+    "through2": "^2.0.3",
+    "ts-loader": "^2.0.3",
+    "tslint": "^4.5.1",
+    "tslint-eslint-rules": "^3.5.1",
+    "typescript": "^2.2.1",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^2.3.3",
+    "webpack-node-externals": "^1.5.4",
+    "webpack-stream": "^3.2.0"
+  }
+}
