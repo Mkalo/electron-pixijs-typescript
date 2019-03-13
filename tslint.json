@@ -11,7 +11,6 @@
 		"no-invalid-this": true,
 		"no-multi-spaces": [true],
 		"no-construct": true,
-		"no-unused-new": true,
 		"no-unused-expression": true,
 		"no-shadowed-variable": true,
 		"no-console": false,

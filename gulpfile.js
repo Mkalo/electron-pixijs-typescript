@@ -11,8 +11,6 @@ const path = require('path');
 const merge = require('merge2');
 const webpack = require('webpack');
 const gulpWebpack = require('webpack-stream');
-const through = require('through2');
-const named = require('vinyl-named');
 const nodeExternals = require('webpack-node-externals');
 
 const appProject = gulpTs.createProject('tsconfig.json');
