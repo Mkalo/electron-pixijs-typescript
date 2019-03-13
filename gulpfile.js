@@ -1,7 +1,7 @@
 'use strict'
 
 const gulp = require('gulp');
-const gutil = require('gulp-util');
+const argv = require('minimist')(process.argv.slice(2));
 const gulpTs = require('gulp-typescript');
 const gulpTslint = require('gulp-tslint');
 const sourcemaps = require('gulp-sourcemaps');
@@ -18,22 +18,22 @@ const nodeExternals = require('webpack-node-externals');
 const appProject = gulpTs.createProject('tsconfig.json');
 const typeCheck = tslint.Linter.createProgram('tsconfig.json');
 
-gulp.task('lint', () => {
+gulp.task('lint', () => merge([
 	gulp.src('./src/**/*.ts')
 		.pipe(gulpTslint({
 			configuration: 'tslint.json',
 			formatter: 'prose',
 			program: typeCheck
 		}))
-		.pipe(gulpTslint.report());
+		.pipe(gulpTslint.report()),
 	gulp.src('./app/**/*.ts')
 		.pipe(gulpTslint({
 			configuration: 'tslint.json',
 			formatter: 'prose',
 			program: typeCheck
 		}))
-		.pipe(gulpTslint.report());
-})
+		.pipe(gulpTslint.report())
+]));
 
 gulp.task('build', () => {
 	del.sync(['./build/**/*.*']);
@@ -53,7 +53,7 @@ gulp.task('build', () => {
 		.pipe(appProject());
 
 	const externals = [];
-	if (!gutil.env.web) {
+	if (!argv.web) {
 		externals.push(nodeExternals());
 	}
 	
@@ -75,7 +75,7 @@ gulp.task('build', () => {
 				filename: 'app.js'
 			},
 			externals: externals,
-			target: gutil.env.web ? 'web' : 'electron-renderer',
+			target: argv.web ? 'web' : 'electron-renderer',
 			devtool: 'inline-source-map'
 		}, webpack))
 
