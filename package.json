@@ -21,7 +21,7 @@
     "@types/node": "^11.11.3",
     "@types/pixi.js": "^4.8.6",
     "del": "^4.0.0",
-    "electron": "^4.0.8",
+    "electron": "^7.2.4",
     "gulp": "^4.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-tslint": "^8.1.4",
