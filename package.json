@@ -27,7 +27,7 @@
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.0",
     "merge2": "^1.2.3",
-    "minimist": "^1.2.3",
+    "minimist": "^1.2.6",
     "pixi.js": "^4.8.6",
     "ts-loader": "^5.3.3",
     "tslint": "^5.13.1",
