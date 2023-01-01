@@ -29,12 +29,12 @@
     "merge2": "^1.2.3",
     "minimist": "^1.2.3",
     "pixi.js": "^4.8.6",
-    "ts-loader": "^5.3.3",
+    "ts-loader": "^9.4.2",
     "tslint": "^5.13.1",
     "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.3.3333",
-    "webpack": "^4.29.6",
+    "webpack": "^5.75.0",
     "webpack-node-externals": "^1.7.2",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^7.0.0"
   }
 }
